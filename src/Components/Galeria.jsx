@@ -15,7 +15,7 @@ import "../assets/Css/Galeria.css"
 
 export default function Home() {
 
-    const { pizza, setDetallePizza } = useContext(Context);
+    const { pizza, setDetallePizza, carrito, setCarritto } = useContext(Context);
     const [id, setId] = useState("");
     const navigate = useNavigate();
 
@@ -23,6 +23,12 @@ export default function Home() {
 
         navigate(`/pizza/${id2}`);
 
+    }
+
+    const añadirPizza = (e) =>{
+
+        setCarritto([...carrito, e]);
+        console.log(carrito.name)
     }
 
     return (
@@ -43,12 +49,15 @@ export default function Home() {
                                 <div className='form-cont-gen-button'>
                                     <div className='form-cont-ver-mas'>
                                         <a className='color-ver-mas' 
-                                            onClick={() => (setId(e.id), verMas(e.id), setDetallePizza(e))}>Ver Más 
+                                            onClick={() => (setId(e.id), verMas(e.id), setDetallePizza(e))}>
+                                            Ver Más 
                                             <img className="form-img-button" src={ojos} />
                                         </a>
                                     </div>
                                     <div className='form-cont-agregar'>
-                                        <a className='color-agregar'>Añadir
+                                        <a className='color-agregar'
+                                            onClick={() => ( añadirPizza(e), setCarritto(e))}>
+                                            Añadir
                                             <img className="form-img-button" src={verificar} />
                                         </a>
                                     </div>

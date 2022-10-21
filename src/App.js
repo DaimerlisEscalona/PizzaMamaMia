@@ -15,7 +15,8 @@ function App() {
 
   const [pizza, setPizza] = useState([]);
   const [detallePizza, setDetallePizza] = useState([]);
-  const sharedState = { pizza, setPizza, detallePizza, setDetallePizza };
+  const [carrito, setCarritto] = useState([]);
+  const sharedState = { pizza, setPizza, detallePizza, setDetallePizza, carrito, setCarritto };
 
   const consultarJson = async () => {
 

@@ -1,26 +1,30 @@
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { NavLink } from "react-router-dom";
 import pizza from "../assets/Img/pizza.png"
 import verificar from "../assets/Img/verificar.png"
 import "../assets/Css/Navbar.css"
 
 export default function NavBar() {
 
-    return(
+    const setActiveClass = ({ isActive }) => (isActive ? "active" : undefined);
+
+    return (
 
         <Navbar className='form-cont-navbar' bg="" variant="">
-                <div className="form-cont-img">
-                    <img className="form-img" src={pizza} alt=""></img>
-                    <Navbar.Brand href="#home"> Pizería Mamma Mia!</Navbar.Brand>
+            <div className="form-cont-img-pizza">
+                <img className="form-img-navbar" src={pizza} alt=""></img>
+            </div>
+            <NavLink className={setActiveClass} to="/">Pizería Mamma Mia!</NavLink>
+            <Nav className=" justify-content-end container me-auto">
+                <div className='form-cont-img-carrito'>
+                    <img className="form-img-navbar" src={verificar} alt=""></img>
                 </div>
-                <div className='form-cont-carrito '>
-                    <div className='form-cont-img'>
-                        <img className="form-img" src={verificar} alt=""></img>
-                    </div>
-                    <Nav.Link href="#home">Carrito</Nav.Link>   
-                </div>
+                <NavLink className={setActiveClass} to="/carrito">
+                    Carrito
+                </NavLink>
+            </Nav>
         </Navbar>
-      
 
     )
 }
