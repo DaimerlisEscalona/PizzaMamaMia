@@ -1,0 +1,38 @@
+.form-cont-navbar{
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color:rgb(90, 223, 233) ;
+}
+.active {
+
+    color: rgb(219, 8, 8);
+    margin: 2vh;
+    
+}
+
+.form-cont-img{
+
+    width: 8vh;
+    height: 8h;
+    margin: 0 0 0 15vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-img{
+
+    width: 100%;
+    height: 100%;
+    
+}
+
+.form-cont-carrito{
+
+    display: flex;
+    margin: 0 15vh 0 0;
+}
