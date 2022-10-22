@@ -28,7 +28,7 @@ export default function Home() {
     const añadirPizza = (e) =>{
 
         setCarritto([...carrito, e]);
-        console.log(carrito.name)
+        console.log(carrito)
     }
 
     return (
@@ -40,12 +40,15 @@ export default function Home() {
                         <Card style={{ width: '18rem' }}>
                             <Card.Img className="" variant="top" src={e.img} />
                             <Card.Body>
-                                <Card.Title>{e.name}</Card.Title>
                                 <ListGroup className="list-group-flush">
-                                    <ListGroup.Item >Ingredientes: {e.ingredients}</ListGroup.Item>
+                                <ListGroup.Item >{e.name}</ListGroup.Item>
+                                    Ingredientes
+                                    <ListGroup.Item >{e.ingredients[0]}</ListGroup.Item>
+                                    <ListGroup.Item >{e.ingredients[1]}</ListGroup.Item>
+                                    <ListGroup.Item >{e.ingredients[2]}</ListGroup.Item>
+                                    <ListGroup.Item >{e.ingredients[3]}</ListGroup.Item>
                                 </ListGroup>
-                                <h3 className='form-titulo'>$ {e.price}</h3>
-                                {/* <h3 className='form-titulo'>$ {e.price.toLocaleString('en-EN')}</h3> */}
+                                <h3 className='form-titulo'>{e.price.toLocaleString('en-EN', { style: 'currency', currency: 'CLP' })}</h3>
                                 <div className='form-cont-gen-button'>
                                     <div className='form-cont-ver-mas'>
                                         <a className='color-ver-mas' 
@@ -56,7 +59,7 @@ export default function Home() {
                                     </div>
                                     <div className='form-cont-agregar'>
                                         <a className='color-agregar'
-                                            onClick={() => ( añadirPizza(e), setCarritto(e))}>
+                                            onClick={() => ( añadirPizza(e))}>
                                             Añadir
                                             <img className="form-img-button" src={verificar} />
                                         </a>

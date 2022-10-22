@@ -23,6 +23,13 @@
     flex-direction: column;
     text-align: center;
     color: white;
-    display: flex;
+    margin: 5vh 0 0 0;
+    
 
+}
+
+.prueba{
+
+    display: flex;
+    flex-direction: column;
 }

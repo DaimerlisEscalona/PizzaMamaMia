@@ -7,6 +7,7 @@ import NavBar from "./Components/NavBar"
 import Home from "./Views/Home"
 import DetallePizza from "./Views/DetallePizza";
 import Carrito from "./Views/Carrito.jsx"
+import Footer from "./Components/Footer.jsx"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -44,6 +45,7 @@ function App() {
             <Route path="/pizza/:id" element={<DetallePizza />} />
             <Route path="/carrito" element={<Carrito />} />
           </Routes>
+          <Footer/>
         </BrowserRouter>
       </Context.Provider>
     </div>
