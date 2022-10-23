@@ -17,7 +17,7 @@ function App() {
   const [pizza, setPizza] = useState([]);
   const [detallePizza, setDetallePizza] = useState([]);
   const [carrito, setCarritto] = useState([]);
-  const sharedState = { pizza, setPizza, detallePizza, setDetallePizza, carrito, setCarritto };
+  const sharedState = { pizza, setPizza, detallePizza, setDetallePizza, carrito, setCarritto};
 
   const consultarJson = async () => {
 
@@ -35,14 +35,25 @@ function App() {
 
   }, [])
 
+  const añadirPizza = (e) =>{
+
+    setCarritto([...carrito, e]);
+    console.log(carrito)
+}
+
+
   return (
     <div className="App">
       <Context.Provider value={sharedState}>
         <BrowserRouter>
           <NavBar />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/pizza/:id" element={<DetallePizza />} />
+            <Route path="/" element={<Home
+              añadirPizza={añadirPizza}
+            />} />
+            <Route path="/pizza/:id" element={<DetallePizza
+              añadirPizza={añadirPizza} 
+            />} />
             <Route path="/carrito" element={<Carrito />} />
           </Routes>
           <Footer/>

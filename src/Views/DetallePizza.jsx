@@ -7,8 +7,9 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 import "../assets/Css/DetallePizza.css"
 import verificar from "../assets/Img/verificar.png"
+import pizzalista from "../assets/Img/pizzalista.png"
 
-export default function DetallePizza() {
+export default function DetallePizza(props) {
 
   const { detallePizza } = useContext(Context);
 
@@ -19,19 +20,41 @@ export default function DetallePizza() {
         <Card.Img className="form-img-card" src={detallePizza.img} variant="top" />
       </div>
       <Card.Body className="form-body" >
-        <Card.Title>{detallePizza.name}</Card.Title>
-        <Card.Text>{detallePizza.desc}</Card.Text>
-        {/* {detallePizza.map((e) => ( */}
         <ListGroup className="list-group-flush">
-          <ListGroup.Item >{detallePizza.ingredients}</ListGroup.Item>
+          <ListGroup.Item >
+            <h4 className='form-name'>{detallePizza.name}</h4>
+          </ListGroup.Item>
+          <p className='form-parrafo'>{detallePizza.desc}</p>
+          <ul className='form-ul'>
+            <h6>Ingredientes</h6>
+            <li className='form-lista'>
+              <img className="form-img-list" src={pizzalista} alt=""></img>
+              {detallePizza.ingredients[0]}
+            </li>
+            <li className='form-lista'>
+              <img className="form-img-list" src={pizzalista} alt=""></img>
+              {detallePizza.ingredients[1]}
+            </li>
+            <li className='form-lista'>
+              <img className="form-img-list" src={pizzalista} alt=""></img>
+              {detallePizza.ingredients[2]}
+            </li>
+            <li className='form-lista'>
+              <img className="form-img-list" src={pizzalista} alt=""></img>
+              {detallePizza.ingredients[3]}
+            </li>
+          </ul>
+          <div className='form-precio-añadir'>
+            <h3 className='form-titulo'>Precio: {detallePizza.price.toLocaleString('en-EN', { style: 'currency', currency: 'CLP' })}</h3>
+            <div className='form-cont-agregar'>
+              <a className='color-agregar'
+                onClick={() => ( props.añadirPizza(detallePizza))}>
+                Añadir
+                <img className="form-img-button" src={verificar} />
+              </a>
+            </div>
+          </div>
         </ListGroup>
-        {/* ))} */}
-        <h3 className='form-titulo'>Precio: ${detallePizza.price}</h3>
-        <div className='form-cont-agregar'>
-          <a className='color-agregar'>Añadir
-            <img className="form-img-button" src={verificar}/>
-          </a>
-        </div>
       </Card.Body>
     </div>
 

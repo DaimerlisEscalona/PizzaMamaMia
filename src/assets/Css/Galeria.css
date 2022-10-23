@@ -4,11 +4,37 @@
 
 }
 
-.form-titulo{
+.form-name {
+
+    text-transform: capitalize;
+}
+.form-ul{
+
+    margin: 2vh 0 2vh 0;
+
+}
+
+.form-lista{
+
+    list-style: none;
+    text-transform: capitalize;
+    
+}
+
+.form-img-list{
+
+    width: 4vh;
+    height: 4vh;
+    margin: 2vh 1vh 2vh 1vh;
+
+}
+
+.form-precio{
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 0 2vh 0;
 
 }
 

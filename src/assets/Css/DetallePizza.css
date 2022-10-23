@@ -1,9 +1,8 @@
 .form-cont-card{
 
-
     display: flex;
     flex-direction: row;
-    margin: 10vh 3vh 0 3vh;
+    margin: 10vh 3vh 10vh 3vh;
     width: 90%;
     align-items: center;
     border: 1px gray solid;
@@ -14,6 +13,7 @@
 
     width: 70vh;
     align-items: center;
+    height: 70vh;
 }
 
 .form-img-card{
@@ -31,4 +31,17 @@
     justify-content: center;
     font-size: large;
     margin: 0 0 0 2vh;
+
+}
+.form-parrafo{
+
+    margin: 2vh ;
+}
+
+.form-precio-añadir{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2vh;
 }

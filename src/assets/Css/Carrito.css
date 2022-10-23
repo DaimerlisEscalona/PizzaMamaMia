@@ -1,0 +1,22 @@
+.form-cont-vista-carrito{
+
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(207, 207, 207);
+    margin: 10vh;
+
+}
+
+.cont-list-group{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80vh;
+}
+
+.cont-pedido{
+
+    display: flex;
+    flex-direction: row;
+}

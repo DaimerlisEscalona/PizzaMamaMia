@@ -10,12 +10,13 @@ import ListGroup from 'react-bootstrap/ListGroup';
 
 import ojos from "../assets/Img/ojos.png";
 import verificar from "../assets/Img/verificar.png";
+import pizzalista from "../assets/Img/pizzalista.png"
 
 import "../assets/Css/Galeria.css"
 
-export default function Home() {
+export default function Home(props) {
 
-    const { pizza, setDetallePizza, carrito, setCarritto } = useContext(Context);
+    const { pizza, setDetallePizza } = useContext(Context);
     const [id, setId] = useState("");
     const navigate = useNavigate();
 
@@ -23,12 +24,6 @@ export default function Home() {
 
         navigate(`/pizza/${id2}`);
 
-    }
-
-    const añadirPizza = (e) =>{
-
-        setCarritto([...carrito, e]);
-        console.log(carrito)
     }
 
     return (
@@ -41,14 +36,30 @@ export default function Home() {
                             <Card.Img className="" variant="top" src={e.img} />
                             <Card.Body>
                                 <ListGroup className="list-group-flush">
-                                <ListGroup.Item >{e.name}</ListGroup.Item>
-                                    Ingredientes
-                                    <ListGroup.Item >{e.ingredients[0]}</ListGroup.Item>
-                                    <ListGroup.Item >{e.ingredients[1]}</ListGroup.Item>
-                                    <ListGroup.Item >{e.ingredients[2]}</ListGroup.Item>
-                                    <ListGroup.Item >{e.ingredients[3]}</ListGroup.Item>
+                                    <ListGroup.Item >
+                                        <h4 className='form-name'>{e.name}</h4>
+                                    </ListGroup.Item>
+                                    <ul className='form-ul'>
+                                        <h6>Ingredientes</h6>
+                                        <li className='form-lista'>
+                                            <img className="form-img-list" src={pizzalista} alt=""></img>
+                                            {e.ingredients[0]}
+                                        </li>
+                                        <li className='form-lista'>
+                                            <img className="form-img-list" src={pizzalista} alt=""></img>
+                                            {e.ingredients[1]}
+                                        </li>
+                                        <li className='form-lista'>
+                                            <img className="form-img-list" src={pizzalista} alt=""></img>
+                                            {e.ingredients[2]}
+                                        </li>
+                                        <li className='form-lista'>
+                                            <img className="form-img-list" src={pizzalista} alt=""></img>
+                                            {e.ingredients[3]}
+                                        </li>
+                                    </ul>
                                 </ListGroup>
-                                <h3 className='form-titulo'>{e.price.toLocaleString('en-EN', { style: 'currency', currency: 'CLP' })}</h3>
+                                <h3 className='form-precio'>{e.price.toLocaleString('en-EN', { style: 'currency', currency: 'CLP' })}</h3>
                                 <div className='form-cont-gen-button'>
                                     <div className='form-cont-ver-mas'>
                                         <a className='color-ver-mas' 
@@ -59,7 +70,7 @@ export default function Home() {
                                     </div>
                                     <div className='form-cont-agregar'>
                                         <a className='color-agregar'
-                                            onClick={() => ( añadirPizza(e))}>
+                                            onClick={() => ( props.añadirPizza())}>
                                             Añadir
                                             <img className="form-img-button" src={verificar} />
                                         </a>
@@ -73,3 +84,5 @@ export default function Home() {
         </div>
     )
 }
+
+
