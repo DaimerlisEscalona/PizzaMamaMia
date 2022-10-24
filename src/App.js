@@ -17,7 +17,8 @@ function App() {
   const [pizza, setPizza] = useState([]);
   const [detallePizza, setDetallePizza] = useState([]);
   const [carrito, setCarritto] = useState([]);
-  const sharedState = { pizza, setPizza, detallePizza, setDetallePizza, carrito, setCarritto};
+  const sharedState = { pizza, setPizza, detallePizza, setDetallePizza, carrito, setCarritto };
+
 
   const consultarJson = async () => {
 
@@ -35,12 +36,22 @@ function App() {
 
   }, [])
 
-  const añadirPizza = (e) =>{
+  const añadirPizza = (p) => {
 
-    setCarritto([...carrito, e]);
-    console.log(carrito)
-}
+    const existence = carrito.find((x) => x.id === p.id);
 
+
+    if (carrito.find((x) => x.id === p.id)) {
+      setCarritto(
+        carrito.map((x) =>
+          x.id === p.id ? { ...existence, qty: existence.qty + 1 } : x
+        )
+      );
+    } else {
+      setCarritto([...carrito, { ...p, qty: 1 }]);
+    }
+
+  }
 
   return (
     <div className="App">
@@ -52,11 +63,13 @@ function App() {
               añadirPizza={añadirPizza}
             />} />
             <Route path="/pizza/:id" element={<DetallePizza
-              añadirPizza={añadirPizza} 
+              añadirPizza={añadirPizza}
             />} />
-            <Route path="/carrito" element={<Carrito />} />
+            <Route path="/carrito" element={<Carrito
+              añadirPizza={añadirPizza}
+            />} />
           </Routes>
-          <Footer/>
+          <Footer />
         </BrowserRouter>
       </Context.Provider>
     </div>

@@ -70,7 +70,7 @@ export default function Home(props) {
                                     </div>
                                     <div className='form-cont-agregar'>
                                         <a className='color-agregar'
-                                            onClick={() => ( props.añadirPizza())}>
+                                            onClick={() => ( props.añadirPizza(e))}>
                                             Añadir
                                             <img className="form-img-button" src={verificar} />
                                         </a>

@@ -45,10 +45,12 @@ export default function DetallePizza(props) {
             </li>
           </ul>
           <div className='form-precio-añadir'>
-            <h3 className='form-titulo'>Precio: {detallePizza.price.toLocaleString('en-EN', { style: 'currency', currency: 'CLP' })}</h3>
+            <h3 className='form-titulo'>
+              Precio: {detallePizza.price.toLocaleString('en-EN', { style: 'currency', currency: 'CLP' })}
+            </h3>
             <div className='form-cont-agregar'>
               <a className='color-agregar'
-                onClick={() => ( props.añadirPizza(detallePizza))}>
+                onClick={() => (props.añadirPizza(detallePizza))}>
                 Añadir
                 <img className="form-img-button" src={verificar} />
               </a>

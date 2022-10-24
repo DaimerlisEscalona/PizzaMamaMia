@@ -1,3 +1,9 @@
+.form-cont-header{
+
+    display: flex;
+    flex-direction: column;
+}
+
 .form-cont-img-home{
 
     width: 100%;
@@ -25,11 +31,5 @@
     color: white;
     margin: 5vh 0 0 0;
     
-
 }
 
-.prueba{
-
-    display: flex;
-    flex-direction: column;
-}
