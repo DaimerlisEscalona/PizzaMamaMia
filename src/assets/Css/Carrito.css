@@ -8,14 +8,16 @@
 
 .form-img-carrito{
 
-    width: 5vh;
-    height: 5vh;
+
+    max-width: 5vh;
+    max-height: 5vh;
 }
 
-.forma-name-carrito{
+.form-name-carrito{
 
     margin: 0 0 0 1vh;
     text-align: center;
+    text-transform: capitalize;
 }
 
 .cont-list-group{
@@ -24,7 +26,8 @@
     flex-direction: row;
     justify-content: space-between;
     width: 80vh;
-    background-color: w;
+
+
 }
 
 .cont-pedido{
@@ -32,4 +35,5 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+
 }

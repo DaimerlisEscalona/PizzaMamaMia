@@ -17,6 +17,7 @@ function App() {
   const [pizza, setPizza] = useState([]);
   const [detallePizza, setDetallePizza] = useState([]);
   const [carrito, setCarritto] = useState([]);
+  const totalProduct = carrito.reduce((a, c) => a + c.qty * c.price, 0);
   const sharedState = { pizza, setPizza, detallePizza, setDetallePizza, carrito, setCarritto };
 
 
@@ -57,7 +58,9 @@ function App() {
     <div className="App">
       <Context.Provider value={sharedState}>
         <BrowserRouter>
-          <NavBar />
+          <NavBar
+            totalProduct={totalProduct}
+          />
           <Routes>
             <Route path="/" element={<Home
               añadirPizza={añadirPizza}
@@ -67,6 +70,7 @@ function App() {
             />} />
             <Route path="/carrito" element={<Carrito
               añadirPizza={añadirPizza}
+              totalProduct={totalProduct}
             />} />
           </Routes>
           <Footer />

@@ -4,7 +4,7 @@ import pizza from "../assets/Img/pizza.png"
 import verificar from "../assets/Img/verificar.png"
 import "../assets/Css/Navbar.css"
 
-export default function NavBar() {
+export default function NavBar(props) {
 
     const setActiveClass = ({ isActive }) => (isActive ? "active" : undefined);
 
@@ -26,7 +26,9 @@ export default function NavBar() {
                     <img className="form-img-navbar" src={verificar} alt=""></img>
                 </div>
                 <NavLink className={setActiveClass} to="/carrito">
-                    Carrito
+                    <h4>
+                        {props.totalProduct.toLocaleString('en-EN', { style: 'currency', currency: 'CLP' })}
+                    </h4>
                 </NavLink>
             </div>
         </Navbar>
