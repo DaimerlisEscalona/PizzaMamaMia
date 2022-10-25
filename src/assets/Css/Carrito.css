@@ -4,13 +4,31 @@
     flex-direction: column;
     background-color: rgb(207, 207, 207);
     margin: 10vh;
+    
+}
+
+.form-tit-carrito{
+
+    margin: 2vh 0 0 4vh;
+}
+
+.cont-detalle-carrito{
+
+    display: flex;
+    flex-direction: row;
+    margin: 4vh;
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    
 }
 
 .form-img-carrito{
 
 
-    max-width: 5vh;
-    max-height: 5vh;
+    max-width: 7vh;
+    max-height: 7vh;
 }
 
 .form-name-carrito{
@@ -18,6 +36,10 @@
     margin: 0 0 0 1vh;
     text-align: center;
     text-transform: capitalize;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
 }
 
 .cont-list-group{
@@ -30,10 +52,53 @@
 
 }
 
+.prueba{
+    display: flex;
+    flex-direction: row;
+}
+
+.color-eliminar-carrito{
+
+    height: 5vh;
+    width: 5vh;
+    border-radius: 1vh;
+    color: white;
+    text-decoration:none;
+    margin: 0 1vh 0 1vh;
+}
+
+.color-agregar-carrito{
+
+    height: 5vh;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 1vh;
+    color: white;
+    text-decoration:none;
+    margin: 0 0 0 1vh;
+
+}
+
+.form-cont-total{
+
+    margin: 0 0 2vh 4vh;
+}
+
+.cont-info-pedido{
+
+    display: flex;
+    width: 40%;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 0 0 15vh;
+
+}
+
 .cont-pedido{
 
     display: flex;
-    flex-direction: row;
     align-items: center;
-
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 40%;
 }

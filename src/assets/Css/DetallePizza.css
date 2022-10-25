@@ -1,4 +1,4 @@
-.form-cont-card{
+.form-cont-card {
 
     display: flex;
     flex-direction: row;
@@ -9,22 +9,22 @@
 
 }
 
-.form-cont-img-card{
+.form-cont-img-card {
 
     width: 70vh;
     align-items: center;
     height: 70vh;
 }
 
-.form-img-card{
+.form-img-card {
 
     width: 100%;
     height: 100%;
 }
 
-.form-body{
+.form-body {
 
-    align-items:flex-start;
+    align-items: flex-start;
     width: 40vh;
     display: flex;
     flex-direction: column;
@@ -33,12 +33,13 @@
     margin: 0 0 0 2vh;
 
 }
-.form-parrafo{
 
-    margin: 2vh ;
+.form-parrafo {
+
+    margin: 2vh;
 }
 
-.form-precio-añadir{
+.form-precio-añadir {
 
     display: flex;
     flex-direction: row;

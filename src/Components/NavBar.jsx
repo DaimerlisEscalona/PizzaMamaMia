@@ -1,5 +1,6 @@
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from "react-router-dom";
+
 import pizza from "../assets/Img/pizza.png"
 import verificar from "../assets/Img/verificar.png"
 import "../assets/Css/Navbar.css"

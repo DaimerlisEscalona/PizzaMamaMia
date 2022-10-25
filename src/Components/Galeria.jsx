@@ -62,15 +62,15 @@ export default function Home(props) {
                                 <h3 className='form-precio'>{e.price.toLocaleString('en-EN', { style: 'currency', currency: 'CLP' })}</h3>
                                 <div className='form-cont-gen-button'>
                                     <div className='form-cont-ver-mas'>
-                                        <a className='color-ver-mas' 
+                                        <a className='color-ver-mas'
                                             onClick={() => (setId(e.id), verMas(e.id), setDetallePizza(e))}>
-                                            Ver Más 
+                                            Ver Más
                                             <img className="form-img-button" src={ojos} />
                                         </a>
                                     </div>
                                     <div className='form-cont-agregar'>
                                         <a className='color-agregar'
-                                            onClick={() => ( props.añadirPizza(e))}>
+                                            onClick={() => (props.añadirPizza(e))}>
                                             Añadir
                                             <img className="form-img-button" src={verificar} />
                                         </a>
@@ -84,5 +84,4 @@ export default function Home(props) {
         </div>
     )
 }
-
 

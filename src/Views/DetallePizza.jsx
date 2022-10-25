@@ -4,6 +4,7 @@ import Context from '../Contex';
 
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import Button from 'react-bootstrap/Button';
 
 import "../assets/Css/DetallePizza.css"
 import verificar from "../assets/Img/verificar.png"
@@ -45,7 +46,7 @@ export default function DetallePizza(props) {
             </li>
           </ul>
           <div className='form-precio-añadir'>
-            <h3 className='form-titulo'>
+            <h3>
               Precio: {detallePizza.price.toLocaleString('en-EN', { style: 'currency', currency: 'CLP' })}
             </h3>
             <div className='form-cont-agregar'>

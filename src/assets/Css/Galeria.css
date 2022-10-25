@@ -1,6 +1,6 @@
-.form-cont-pizzas{
-    
-    margin: 15vh 8vh 0 8vh ;
+.form-cont-pizzas {
+
+    margin: 15vh 8vh 0 8vh;
 
 }
 
@@ -9,21 +9,21 @@
     text-transform: capitalize;
 }
 
-.form-ul{
+.form-ul {
 
     margin: 2vh 0 2vh 0;
 
 }
 
-.form-lista{
+.form-lista {
 
     list-style: none;
     text-transform: capitalize;
 
-    
+
 }
 
-.form-img-list{
+.form-img-list {
 
     width: 4vh;
     height: 4vh;
@@ -31,7 +31,7 @@
 
 }
 
-.form-precio{
+.form-precio {
 
     display: flex;
     flex-direction: column;
@@ -40,14 +40,14 @@
 
 }
 
-.form-cont-gen-button{
+.form-cont-gen-button {
 
     display: flex;
     flex-direction: row;
 
 }
 
-.form-cont-ver-mas{
+.form-cont-ver-mas {
 
     display: flex;
     flex-direction: row;
@@ -56,49 +56,48 @@
     justify-content: center;
     align-content: center;
     align-items: center;
-    
+
 }
 
-.color-ver-mas{
+.color-ver-mas {
 
-    background-color:rgb(90, 223, 233) ;
+    background-color: rgb(90, 223, 233);
     width: 80%;
     border-radius: 1vh;
     color: white;
-    text-decoration:none;
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
 
-.form-img-button{
+.form-img-button {
 
     width: 4vh;
     height: 4vh;
     margin: 2vh 1vh 2vh 1vh;
 }
 
-.form-cont-agregar{
+.form-cont-agregar {
 
     display: flex;
     flex-direction: row;
     width: 50%;
     justify-content: center;
     height: 7vh;
-    
+
 }
 
-.color-agregar{
+.color-agregar {
 
-    background-color:rgb(247, 87, 82);
+    background-color: rgb(247, 87, 82);
     width: 80%;
     border-radius: 1vh;
     color: white;
-    text-decoration:none;
+    text-decoration: none;
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
-

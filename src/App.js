@@ -41,7 +41,6 @@ function App() {
 
     const existence = carrito.find((x) => x.id === p.id);
 
-
     if (carrito.find((x) => x.id === p.id)) {
       setCarritto(
         carrito.map((x) =>
@@ -52,6 +51,20 @@ function App() {
       setCarritto([...carrito, { ...p, qty: 1 }]);
     }
 
+  }
+
+  const borrarPizza = (p) => {
+
+    const exist = carrito.find((x) => x.id === p.id);
+    if (exist.qty === 1) {
+      setCarritto(carrito.filter((x) => x.id !== p.id));
+    } else {
+      setCarritto(
+        carrito.map((x) =>
+          x.id === p.id ? { ...exist, qty: exist.qty - 1 } : x
+        )
+      );
+    }
   }
 
   return (
@@ -70,6 +83,7 @@ function App() {
             />} />
             <Route path="/carrito" element={<Carrito
               añadirPizza={añadirPizza}
+              borrarPizza={borrarPizza}
               totalProduct={totalProduct}
             />} />
           </Routes>
