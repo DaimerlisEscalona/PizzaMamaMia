@@ -1,8 +1,18 @@
+.cont-general-galeria{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
 .form-cont-pizzas {
 
     margin: 15vh 8vh 0 8vh;
-    display: grid;
-    grid-template-columns: auto auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 
@@ -101,20 +111,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-}
-@media(min-width: 577px) and (max-width: 991px){
-
-    .form-cont-pizzas {
-
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 2vh;
-        margin-top: 2vh;
-        margin-block-end: 2vh;
-        margin: 15vh 8vh 0 8vh;
-    
-    }
-
 
 }

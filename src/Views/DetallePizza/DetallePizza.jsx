@@ -4,7 +4,6 @@ import Context from '../../Contex.jsx';
 
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-import Button from 'react-bootstrap/Button';
 
 import "./DetallePizza.css"
 import verificar from "../../assets/Img/verificar.png"

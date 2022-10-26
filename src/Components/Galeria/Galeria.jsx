@@ -25,16 +25,17 @@ export default function Home(props) {
         navigate(`/pizza/${id2}`);
 
     }
-    
+
     return (
 
-        <div className='form-cont-pizzas'>
-            <Row xs={1} md={4} className="g-4">
+        <div className='form-cont-pizzas '>
+            <Row xs={1} sm={1} md={2} lg={3} className="g-4">
                 {pizza.map((e) => (
                     <Col key={e.id} >
-                        <Card  style={{ width: '18rem' }}>
-                            <Card.Img className="" variant="top" src={e.img} />
-                                <ListGroup className="list-group-flush">
+                        <div className='cont-general-galeria'>
+                            <Card style={{ width: '18rem' }}>
+                                <Card.Img className="" variant="top" src={e.img} />
+                                <ListGroup className="list-group-flush ">
                                     <ListGroup.Item >
                                         <h4 className='form-name'>{e.name}</h4>
                                     </ListGroup.Item>
@@ -75,7 +76,8 @@ export default function Home(props) {
                                         </a>
                                     </div>
                                 </div>
-                        </Card>
+                            </Card>
+                        </div>
                     </Col>
                 ))}
             </Row>
