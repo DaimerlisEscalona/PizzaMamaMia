@@ -1,18 +1,18 @@
 import { useContext, useState } from 'react';
 import { useNavigate } from "react-router-dom";
 
-import Context from '../Contex';
+import Context from '../../Contex.jsx';
 
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import ListGroup from 'react-bootstrap/ListGroup';
 
-import ojos from "../assets/Img/ojos.png";
-import verificar from "../assets/Img/verificar.png";
-import pizzalista from "../assets/Img/pizzalista.png"
+import ojos from "../../assets/Img/ojos.png";
+import verificar from "../../assets/Img/verificar.png";
+import pizzalista from "../../assets/Img/pizzalista.png"
 
-import "../assets/Css/Galeria.css"
+import "./Galeria.css"
 
 export default function Home(props) {
 
@@ -25,16 +25,15 @@ export default function Home(props) {
         navigate(`/pizza/${id2}`);
 
     }
-
+    
     return (
 
         <div className='form-cont-pizzas'>
             <Row xs={1} md={4} className="g-4">
                 {pizza.map((e) => (
                     <Col key={e.id} >
-                        <Card style={{ width: '18rem' }}>
+                        <Card  style={{ width: '18rem' }}>
                             <Card.Img className="" variant="top" src={e.img} />
-                            <Card.Body>
                                 <ListGroup className="list-group-flush">
                                     <ListGroup.Item >
                                         <h4 className='form-name'>{e.name}</h4>
@@ -76,7 +75,6 @@ export default function Home(props) {
                                         </a>
                                     </div>
                                 </div>
-                            </Card.Body>
                         </Card>
                     </Col>
                 ))}

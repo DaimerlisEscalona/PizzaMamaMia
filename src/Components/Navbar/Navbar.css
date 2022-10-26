@@ -15,6 +15,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
 
 }
 
@@ -65,5 +66,27 @@
     flex-direction: row;
     align-items: center;
     margin: 0 1vh 0 0;
+
+}
+
+@media (max-width: 991px){
+
+    .form-cont-navbar {
+
+        height: 15vh;
+    
+    }
+
+    .form-tit-navbar{
+
+        font-size: large;
+    }
+
+    .form-cont-img-pizza {
+
+        width: 13vh;
+        height: 10h;  
+    
+    }
 
 }

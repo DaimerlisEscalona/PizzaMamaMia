@@ -3,11 +3,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Context from "./Contex";
 
-import NavBar from "./Components/NavBar"
-import Home from "./Views/Home"
-import DetallePizza from "./Views/DetallePizza";
-import Carrito from "./Views/Carrito.jsx"
-import Footer from "./Components/Footer.jsx"
+import NavBar from "../src/Components/Navbar/NavBar.jsx"
+import Home from "./Views/Home/Home"
+import DetallePizza from "../src/Views/DetallePizza/DetallePizza.jsx";
+import Carrito from "./Views/Carrito/Carrito.jsx"
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -87,7 +86,6 @@ function App() {
               totalProduct={totalProduct}
             />} />
           </Routes>
-          <Footer />
         </BrowserRouter>
       </Context.Provider>
     </div>

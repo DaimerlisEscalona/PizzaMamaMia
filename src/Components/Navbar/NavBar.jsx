@@ -1,9 +1,9 @@
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from "react-router-dom";
 
-import pizza from "../assets/Img/pizza.png"
-import verificar from "../assets/Img/verificar.png"
-import "../assets/Css/Navbar.css"
+import pizza from "../../assets/Img/pizza.png"
+import verificar from "../../assets/Img/verificar.png"
+import "./Navbar.css"
 
 export default function NavBar(props) {
 
@@ -17,7 +17,7 @@ export default function NavBar(props) {
                     <img className="form-img-navbar" src={pizza} alt=""></img>
                 </div>
                 <NavLink className={setActiveClass} to="/">
-                    <h4>
+                    <h4 className='form-tit-navbar'>
                         Pizería Mamma Mia!
                     </h4>
                 </NavLink>
@@ -27,7 +27,7 @@ export default function NavBar(props) {
                     <img className="form-img-navbar" src={verificar} alt=""></img>
                 </div>
                 <NavLink className={setActiveClass} to="/carrito">
-                    <h4>
+                    <h4 className='form-tit-navbar'>
                         {props.totalProduct.toLocaleString('en-EN', { style: 'currency', currency: 'CLP' })}
                     </h4>
                 </NavLink>

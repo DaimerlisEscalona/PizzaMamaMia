@@ -1,6 +1,6 @@
-import "../assets/Css/Header.css"
+import "./Header.css"
 
-import imgpizza from "../assets/Img/imgpizza.jpg"
+import imgpizza from "../../assets/Img/imgpizza.jpg"
 
 export default function Header() {
 
